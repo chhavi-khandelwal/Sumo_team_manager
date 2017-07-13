@@ -1,0 +1,15 @@
+<div class="autocomplete">
+	<div class="input-group">
+		<label>{{ label }}</label>
+		<input type="text" class="dropdown" placeholder="{{ placeholder }}" ng-model="ngModel" ng-blur="blurInput()" ng-keyup="showOptions($event)" ng-focus="getCompleteList($event)" required="string" ng-class="{ 'invalid-input' : errorMessage }"/>
+		<span class="icon--arrow-down" ng-click="getCompleteList($event)">></span>
+	</div>
+
+	<span ng-if="errorMessage" class="error-message">*{{ errorMessage }}</span>
+
+	<ul ng-show="settings.filteredOptions.length">
+		<li ng-repeat="optionName in settings.filteredOptions track by $index" ng-click="selectOption(optionName, true)">
+			{{ optionName }}
+		</li>
+	</ul>
+</div>

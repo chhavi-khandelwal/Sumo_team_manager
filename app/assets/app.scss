@@ -1,0 +1,68 @@
+@import '_variables';
+@import '_helpers';
+@import '_autocomplete';
+@import '_buttons';
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+}
+
+h3 {
+	color: $color-blue;
+	font-size: 26px;
+	font-weight: normal;
+	margin-top: 0;
+}
+
+label {
+	font-weight: bold;
+	color: $color-medium-gray;
+}
+
+.grid {
+	border: 1px solid $color-dark-gray;
+	padding: 20px;
+	margin: 50px auto;
+	width: 400px;
+	background-color: $color-gray;
+	box-shadow: 0 0 2px 3px $color-light-gray,
+		0px 1px 0 0 $color-white inset,
+		0px -1px 0 0 $color-white inset;
+}
+
+.icon--cross {
+	position: absolute;
+	cursor: pointer;
+	color: $color-dark-gray;
+	right: 10px;
+	top: 10px;
+	font-size: 16px;
+}
+
+.error-message {
+	color: $color-red;
+	font-size: 11px;
+	position: absolute;
+	bottom: -5px;
+}
+
+form.ng-submitted {
+	input.ng-invalid, input.invalid-input {
+		box-shadow: 0 0 2px 1px $color-red;
+	}
+}
+
+input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	vertical-align: top;
+}

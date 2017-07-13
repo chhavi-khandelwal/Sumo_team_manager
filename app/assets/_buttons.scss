@@ -1,0 +1,18 @@
+.btn {
+	height: 38px;
+	border-radius: 3px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	width: 100px;
+	margin-left: 10px;
+	font-size: 14px;
+	background-color: $color-dark-gray;
+	color: $color-medium-gray;
+	outline: none;
+
+	&--submit {
+		background-color: $color-blue;
+		color: $color-white;
+ }
+}

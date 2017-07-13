@@ -1,0 +1,63 @@
+.autocomplete {
+	position: relative;
+	ul {
+		padding: 10px 0;
+		position: absolute;
+		top: 50px;
+		border-top: 0;
+		box-shadow: 0 2px 2px 1px $color-dark-gray;
+		width: 100%;
+		background-color: $color-white;
+		z-index: 1;
+
+		li {
+			list-style-type: none;
+			padding: 10px 20px;
+			font-weight: bold;
+
+			&:hover {
+				background-color: $color-gray;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.icon--arrow-down {
+		position: absolute;
+		top: 37px;
+		right: 20px;
+		color: $color-medium-gray;
+		transform: rotate(90deg) scale(0.8, 1.5);
+	}
+
+	li.selected {
+		background-color: $color-gray;
+		cursor: pointer;
+	}
+
+	input::-webkit-input-placeholder {
+		color: $color-medium-gray;
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	.input-group {
+		margin: 15px 0;
+		position: relative;
+	}
+	input.dropdown {
+		background-color: $color-dark-gray;
+		height: 36px;
+		border-radius: 3px;
+		outline: none;
+		border: 1px solid $color-dark-gray;
+		width: 100%;
+		padding: 5px 10px;
+		margin: 10px 0;
+		font-size: 14px;
+
+		&:focus {
+			box-shadow: 0 0 2px 1px $color-light-blue;
+		}
+	}
+}

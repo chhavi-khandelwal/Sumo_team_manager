@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="teammanager">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="../bower_components/angular/angular.js"></script>
+		<script src="app/AppController.js"></script>
+		<script src="app/directives/AutocompleteDropdown.js"></script>
+		<link href="app/assets/app.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<title> Team Manager </title>
+	</head>
+
+	<body ng-controller="AppController">
+		<div class="grid  relative">
+			<form name="teamDialogue" novalidate ng-submit="submitTeamDialogue($event)">
+				<h3>Select an Employee</h3>
+				<span class="icon--cross" ng-click="closeDialogue($event)">&#x2715;</span>
+				<div class="input-group">
+					<input type="checkbox" ng-model="welcomeEmail" id="welcomeEmail">
+					<label for="welcomeEmail">Send welcome email to employee</label>
+				</div>
+
+				<autocomplete-dropdown
+					ng-model="teamInputName"
+					data-options="team"
+					data-placeholder="Select Team..."
+					data-label="Select a Team in the Organization"
+					data-error-message="teamDialogue.$error.invalidTeamInput"
+					data-get-options="getTeams()">
+				</autocomplete-dropdown>
+
+				<autocomplete-dropdown
+					ng-model="teamMemberName"
+					data-options="employees"
+					data-placeholder="Select Employee..."
+					data-label="Select an Employee"
+					data-error-message="teamDialogue.$error.invalidEmployeeInput"
+					data-get-options="getEmployees()">
+				</autocomplete-dropdown>
+
+				<div class="text--right">
+					<button class="btn" ng-click="closeDialogue($event)">CANCEL</button>
+					<button class="btn  btn--submit" type="submit" ng-click="submitDialogue()">OK</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
