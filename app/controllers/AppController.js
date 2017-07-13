@@ -36,7 +36,7 @@ app.controller('AppController', ['$scope', '$http', function ($scope, $http) {
 		e.preventDefault();
 		var confirmation;
 		if ($scope.teamMemberName || $scope.teamInputName) {
-			confirmation = confirm('Are you sure?');
+			confirmation = confirm('Are you sure you want to cancel?');
 		}
 		if (confirmation) {
 			$scope.teamDialogue.$error = {};

@@ -1,8 +1,9 @@
 **Setup**
-1. Run `npm install`
-2. Run `bower install`
-3. Run `npm start`
-4. Open browser window on localhost
+1. Install node
+2. Run `npm install`
+3. Run `bower install`
+4. Run `npm start`
+5. Open browser window on `localhost:8080`
 
 **Project Description**
 1. This projects works on angularJS - 1.5.8
